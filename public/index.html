@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMarket - Ваш маркетплейс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛍️ MyMarket</h1>
+            <p>Первый маркетплейс в вашем регионе</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Добро пожаловать!</h2>
+            <p>Найдите лучшие товары от местных поставщиков</p>
+        </section>
+
+        <section class="categories">
+            <h3>Категории</h3>
+            <div class="category-grid">
+                <div class="category-card" onclick="filterCategory('all')">
+                    <span>🏪</span>
+                    <p>Все товары</p>
+                </div>
+                <div class="category-card" onclick="filterCategory('Электроника')">
+                    <span>📱</span>
+                    <p>Электроника</p>
+                </div>
+                <div class="category-card" onclick="filterCategory('Одежда')">
+                    <span>👕</span>
+                    <p>Одежда</p>
+                </div>
+                <div class="category-card" onclick="filterCategory('Техника')">
+                    <span>🏠</span>
+                    <p>Техника</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <h3>Популярные товары</h3>
+            <div id="products-grid" class="products-grid">
+                <!-- Товары загружаются через JavaScript -->
+            </div>
+        </section>
+
+        <section class="vendor-section">
+            <h3>Поставщикам</h3>
+            <p>Хотите разместить свои товары?</p>
+            <button onclick="showContactForm()">Связаться с нами</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MyMarket. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно контактов -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactForm()">&times;</span>
+            <h3>Свяжитесь с нами</h3>
+            <p>Email: partner@mymarket.kz</p>
+            <p>Телефон: +7 (777) 123-45-67</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
